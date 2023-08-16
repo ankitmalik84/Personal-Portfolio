@@ -113,6 +113,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
+emailjs.init("JhRUEbgHdpl8QWtUw"); // Replace with your actual EmailJS public API key
 
 
 // contact form variables
@@ -133,6 +134,32 @@ for (let i = 0; i < formInputs.length; i++) {
 
   });
 }
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent the default form submission behavior
+
+  // Collect form data
+  const fullName = formInputs[0].value;
+  const email = formInputs[1].value;
+  const message = formInputs[2].value;
+
+  // Set up EmailJS parameters
+  const serviceID = "service_51hibum";
+  const templateID = "template_qbt1qd2";
+  // Send the email
+  emailjs.send(serviceID, templateID, {
+    from_name: fullName,
+    from_email: email,
+    message: `Message:- ${message}\n\nSender Email: ${email}`,
+  }).then(function(response) {
+    console.log("Email sent successfully!");
+  }).catch(function(error) {
+    console.error("Email sending failed:", error);
+  });
+
+  // Reset the form
+  form.reset();
+});
 
 
 
@@ -157,3 +184,4 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
