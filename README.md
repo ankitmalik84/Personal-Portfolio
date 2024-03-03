@@ -34,10 +34,6 @@ Welcome to my portfolio website! Here, you can explore my skills, projects, and 
 
 Contributions are welcome! If you find any bugs or want to improve the website, feel free to open an issue or submit a pull request. 🙌
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Contact Me
 
 - For any work inquiries or collaboration opportunities, feel free to contact me via email at [ankitmalik844903@gmail.com](mailto:ankitmalik844903@gmail.com). 📩
